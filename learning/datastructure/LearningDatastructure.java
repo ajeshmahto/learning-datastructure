@@ -5,6 +5,7 @@
  */
 package learning.datastructure;
 
+import learning.datastructure.adt.stack.DoublyLinkedList;
 import learning.datastructure.adt.stack.Queue;
 import learning.datastructure.adt.stack.Stack;
 
@@ -19,19 +20,23 @@ public class LearningDatastructure {
      */
     public static void main(String[] args) {
         
-       SingleListList list = new SingleListList();
+       DoublyLinkedList list = new DoublyLinkedList();
+        list.insertFirst(900);
        list.insertFirst(100);
        list.insertFirst(200);
        list.insertFirst(300);
+        list.insertLast(5000);
        list.insertFirst(400);
-       list.displayFirst();
-       list.deleteFirst();
-        System.out.println("");
-       list.displayFirst();
-       list.insertLast(800);
-       list.insertLast(900);
-       System.out.println("");
-       list.displayFirst();
+        list.insertFirst(1900);
+
+        list.insertAfter(300,1000);
+
+
+        System.out.println();
+        list.displayFirst();
+        list.delete(300);
+        System.out.println();
+        list.displayFirst();
         
         
         

@@ -21,7 +21,9 @@ public class SingleListList {
         
         
         Node newNode = new Node(data);
-        
+        if(isEmpty()){
+            last=newNode;
+        }
         
         newNode.next= first;
         first = newNode;
@@ -31,24 +33,54 @@ public class SingleListList {
     }
     
     public void insertLast(int data){
-        Node current = first;
+
         Node newNode = new Node(data);
-        while(current.next!=null){
-            current = current.next;
+
+        if(first==null){
+            first = newNode;
         }
-        
-        current.next = newNode;
+        if(last==null) {
+            last =newNode;
+        }
+        if(last!=null) {
+            last.next = newNode;
+            last = newNode;
+        }
         
         
         
         
     }
+
+    public boolean isEmpty(){
+        if(first==null){
+            return true;
+        }
+        else return false;
+    }
+
     
-    public Node deleteFirst(){
-        Node temp = first;
+    public int deleteFirst(){
+        int data = first.data;
         first = first.next;
-        return temp;
+        return data;
          
+    }
+
+    public void delete(int data){
+        Node current = first;
+
+        while(current.next!=null){
+            if(current.data==data){
+
+            }
+        }
+    }
+
+
+    public void deleteLast(){
+        int data = last.data;
+
     }
     
     public void displayFirst(){
@@ -63,5 +95,7 @@ public class SingleListList {
         
         
     }
+
+
     
 }
