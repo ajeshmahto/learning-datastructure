@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package learning.datastructure;
+package learning.datastructure.adt.stack;
 
 import learning.datastructure.adt.stack.Node;
 
